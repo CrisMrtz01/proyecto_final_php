@@ -6,15 +6,17 @@
   <title>Proyecto PHP-MVC-MYSQL</title>
 
   <!-- CSS  -->
-  <link href="img/favicon.png" type="image/png" rel="icon"/>
-  <link href="css/icon.css" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="view/img/favicon.png" type="image/png" rel="icon"/>
+  <link href="view/css/icon.css" rel="stylesheet">
+  <link href="view/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="view/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="view/css/jquery.dataTables.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <nav id="nav" class="azul-ast" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="?c=<?php echo base64_encode('Home'); ?>" class="brand-logo"><img src="img/logo.png" class="responsive-img" ></a>
-    <!-- menú dispositivos grandes -->
+  <nav class="azul-ast" role="navigation" id="nav">
+
+    <div class="nav-wrapper container"><a id="logo-container" href="?c=<?php echo base64_encode('Home'); ?>" class="brand-logo"><img src="view/img/logo.png" class="responsive-img" ></a>
+      <!-- menú dispositivos grandes -->
       <ul class="right hide-on-med-and-down">
         <li><a href="?c=<?php echo base64_encode('Talla'); ?>">Talla</a></li>
         <li><a href="?c=<?php echo base64_encode('Color'); ?>">Color</a></li>
@@ -37,7 +39,7 @@
         </ul>
       </ul>
 
-      <!-- menú dispositivos móbiles -->      
+      <!-- menú dispositivos móbiles -->
       <ul id="nav-mobile" class="sidenav azul-ast">
         <li><a class="white-text" href="?c=<?php echo base64_encode('Home'); ?>"><i class="material-icons white-text">home</i>inicio</a></li>
         <li><a class=" white-text" href="?c=<?php echo base64_encode('Talla'); ?>"><i class="material-icons white-text">style</i>Talla</a></li>
@@ -64,4 +66,5 @@
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-   <!-- Fin del menu-->
+  
+<!-- fin de la cabecera -->

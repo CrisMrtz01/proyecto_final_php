@@ -46,7 +46,10 @@
   <!--  Scripts-->
   <script src="view/js/jquery-2.1.1.min.js"></script>
   <script src="view/js/materialize.js"></script>
-  <script src="view/js/init.js"></script>
+  <!-- para las tablas de datos -->
+  <script src="view/js/dataTable.js"></script>
+  <script src="view/js/jquery.dataTables.min.js"></script>
+  <script src="view/js/init_read.js"></script>
 
   </body>
 </html>

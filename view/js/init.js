@@ -32,3 +32,15 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('.tabs').tabs();
 });
+
+// select
+$(document).ready(function(){
+  $('select').formSelect();
+});
+
+// datepicker (Calendario)
+$(document).ready(function(){
+  $('.datepicker').datepicker();
+});
+
+      
