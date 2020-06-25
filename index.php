@@ -1,24 +1,25 @@
 <?php
+//iniciamos la sesión
+session_start();
 
 //para las conexiones a la base de datos
-//require_once 'model/Conexion.php';  
+require_once 'model/Conexion.php';  
 
     //el valor que coloquemos aquí será el primer controlador
-    //que se llame cuando cargue el proyecto o no ponemos la url
-    //correcta
-  $controller = 'Home';
+    //que se llame cuando cargue el proyecto
+  $controller = 'Login';
 
-  // Toda esta lógica hara el papel de un FrontController
+  // Toda esta lógica hará el papel de un FrontController
   //comprobamos si la c "controlador" está vacía
   if(!isset($_REQUEST['c']))
   {
-      //si el parámetro no ha sido definido cargará HomeController.php
+      //si el parámetro no ha sido definido cargará LoginController.php
       require_once 'controller/'.$controller.'Controller.php';
 
       //Da un formato igual al nombre de la clase controlador
-      $controller = $controller.'Controller'; //HomeController
+      $controller = $controller.'Controller'; //LoginController
 
-      //instanciar la clase PrincipalController
+      //instanciar la clase LoginController
       $controller = new $controller;
 
       //llamamos el método Index() del controlador
@@ -29,7 +30,7 @@
   else // si la c "controlador" tiene valor
   {
     //Obtenemos el controlador decodificado que queremos cargar 
-    $controller = base64_decode($_REQUEST['c']);;
+    $controller = base64_decode($_REQUEST['c']);
 
     //verificamos si se envía también una a "acción/método" y de decodifica
     //si no se envía entonces la acción que se tomará será Index
@@ -39,9 +40,9 @@
     require_once 'controller/'.$controller.'Controller.php';
 
     //Da un formato igual al nombre de la clase del controlador enviado
-    $controller = $controller.'Controller'; //EnviadoController
+    $controller = $controller.'Controller'; //UsuarioController
 
-    //instanciar la clase controlador EnviadoController
+    //instanciar la clase controlador UsuarioController
     $controller = new $controller;
     
     //esta función llama el nombre del controlador y la acción solicitadas

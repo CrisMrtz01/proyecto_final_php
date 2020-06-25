@@ -1,6 +1,6 @@
 
 <!-- inicio del cuerpo -->
-<div class="section no-pad-bot" id="index-banner">
+  <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       
       <h1 class="header center orange-text">Proyecto con php-mvc-mysql</h1>
