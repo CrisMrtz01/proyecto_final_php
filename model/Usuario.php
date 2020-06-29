@@ -55,7 +55,7 @@
         {
             try
             {
-                $stm = $this->pdo->prepare("SELECT u.idusuario AS idusuario, u.nombre AS nombre, u.apellido AS apellido, u.telefono AS telefono, u.email AS email, tp.nombre AS tipo FROM usuario AS u INNER JOIN tiposusuario AS tp ON u.idtipousuario = tp.idtipousuario WHERE u.estado = 1");
+                $stm = $this->pdo->prepare("SELECT u.idusuario AS idusuario, u.nombre AS nombre, u.apellido AS apellido, u.telefono AS telefono, u.email AS email, tp.nombre AS tipo FROM usuario AS u INNER JOIN tipousuario AS tp ON u.idtipousuario = tp.idtipousuario WHERE u.estado = 1");
                 $stm->execute();
                 
                 return $stm->fetchAll(PDO::FETCH_OBJ);
@@ -70,7 +70,7 @@
         {
             try
             {
-                $stm = $this->pdo->prepare("SELECT u.idusuario AS idusuario, u.nombre AS nombre, u.apellido AS apellido, u.telefono AS telefono, u.email AS email, tp.nombre AS tipo FROM usuario AS u INNER JOIN tiposusuario AS tp ON u.idtipousuario = tp.idtipousuario WHERE u.estado = 0");
+                $stm = $this->pdo->prepare("SELECT u.idusuario AS idusuario, u.nombre AS nombre, u.apellido AS apellido, u.telefono AS telefono, u.email AS email, tp.nombre AS tipo FROM usuario AS u INNER JOIN tipousuario AS tp ON u.idtipousuario = tp.idtipousuario WHERE u.estado = 0");
                 $stm->execute();
 
                 return $stm->fetchAll(PDO::FETCH_OBJ);
@@ -85,7 +85,7 @@
         {
             try
             {
-                $stm = $this->pdo->prepare("SELECT u.idusuario AS idusuario, u.nombre AS nombre, u.apellido AS apellido, u.telefono AS telefono, u.email AS email, u.idtipousuario AS idtipousuario, tp.nombre AS tipo, u.clave AS clave, u.idpreguntasecreta AS idpreguntasecreta, u.respuestasecreta AS respuestasecreta, ps.nombre AS pregunta FROM usuario AS u INNER JOIN tiposusuario AS tp ON u.idtipousuario = tp.idtipousuario INNER JOIN preguntasecreta AS ps ON u.idpreguntasecreta = ps.idpreguntasecreta WHERE u.idusuario = ?");
+                $stm = $this->pdo->prepare("SELECT u.idusuario AS idusuario, u.nombre AS nombre, u.apellido AS apellido, u.telefono AS telefono, u.email AS email, u.idtipousuario AS idtipousuario, tp.nombre AS tipo, u.clave AS clave, u.idpreguntasecreta AS idpreguntasecreta, u.respuestasecreta AS respuestasecreta, ps.nombre AS pregunta FROM usuario AS u INNER JOIN tipousuario AS tp ON u.idtipousuario = tp.idtipousuario INNER JOIN preguntasecreta AS ps ON u.idpreguntasecreta = ps.idpreguntasecreta WHERE u.idusuario = ?");
 
                 $stm->execute(array($id));
 
